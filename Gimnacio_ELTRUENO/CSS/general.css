@@ -1,0 +1,117 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background: #222222;
+    padding: 15px 20px 15px 50px;
+}
+
+#navegacion-principal {
+    display: flow-root;
+}
+#navegacion-principal a {
+    color: #999999;
+    text-decoration: none;
+    margin-right: 30px;
+}
+#navegacion-principal a:hover {
+    background: #000;
+    color: #EFAC43;
+}
+
+.flotar-izquierda{
+    float:left;
+}
+
+.flotar-derecha{
+    float:right;
+}
+
+.fondo-negro {
+    background: #000;
+}
+
+.img-banner {
+    background-image: url('../imgs/gym-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
+
+#banner_inicio {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#banner_inicio h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+#banner_inicio p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+#banner_inicio button {
+    background: #EFAC43;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+}
+#banner_inicio button:hover {
+    background: #f39c12;
+}
+
+#beneficios {
+    display: flow-root;
+}
+#beneficios .img-beneficios {
+    background-image: url('../imgs/beneficios.jpg');
+    background-size: cover;
+    height: 600px;
+    width: 40%;
+}
+
+#beneficios .lista-beneficios {
+    box-sizing: border-box;
+    padding: 50px;
+    min-height: 600px;
+    position: relative;
+    width: 60%;
+}
+
+#beneficios .lista-beneficios h2 {
+    color: #EFAC43;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+#beneficios .lista-beneficios ul li {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 32px;
+}
+#beneficios .lista-beneficios .cuadro-decoracion {
+    background: #EFAC43;
+    bottom: 0;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    width: 40px;
+}
+#beneficios .lista-beneficios .primer-cuadro {
+    bottom: 80px;
+    right: 0;
+}
+#beneficios .lista-beneficios .segundo-cuadro {
+    bottom: 40px;
+    right: 40px;
+}
+#beneficios .lista-beneficios .tercer-cuadro {
+    bottom: 0;
+    right: 0;
+}
