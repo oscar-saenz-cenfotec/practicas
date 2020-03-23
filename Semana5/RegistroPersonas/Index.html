@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/general.css">
+    <title>RegistroPersonas</title>
+</head>
+<body>
+    <head>
+
+    </head>
+    <main>
+        <h1>Registro de personas</h1>
+        <form id="frm-registro">
+            <div>
+                <label for="slt-tipo-persona">Tipo de persona</label>
+                <select id="slt-tipo-persona" required>
+                    <option value="">--Seleccione una opcion--</option>
+                    <option value="física">Persona física</option>
+                    <option value="juridica">Persona jurídica</option>
+                </select>
+            </div>
+            <div>
+                <label for="txt-identificacion">Identificación</label>
+                <input type="text" id="txt-identificacion" required>
+            </div>
+            <div>
+                <label for="txt-nacimiento">Fecha naciomiento</label>
+                <input type="date" id="txt-nacimiento" required>
+            </div>
+
+            <div>
+                <label for="txt-edad">Edad</label>
+                <input type="number" id="txt-edad" min=0 max=120 required>
+            </div>
+
+            <div>
+                <button type="button" id="btn-guardar">Guardar</button>
+            </div>
+
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="public/js/registro_controlador.js"></script>
+</body>
+</html>
