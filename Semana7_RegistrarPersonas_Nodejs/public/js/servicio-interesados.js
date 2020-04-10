@@ -4,7 +4,7 @@ let registrar_interesados = async(tipo_persona, identificacion, sexo, fecha_naci
 
     await axios({
             method: 'post',
-            url: 'https://proyect01-inventario-produc.herokuapp.com/api/registrar-interesados',
+            url: 'http://localhost:3000/api/registrar-interesados',
             responseType: 'json',
             //data  = body
             data: {
@@ -30,7 +30,7 @@ let listar_interesados = async() => {
 
     await axios({
             method: 'get',
-            url: 'https://proyect01-inventario-produc.herokuapp.com/api/listar-interesados',
+            url: 'http://localhost:3000/api/listar-interesados',
             responseType: 'json'
         }).then(function(res) {
             interesados = res.data.interesados;

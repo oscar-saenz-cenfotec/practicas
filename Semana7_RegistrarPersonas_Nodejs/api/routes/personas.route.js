@@ -40,7 +40,7 @@ router.get('/listar-personas', (req, res) => {
         if (err) {
             res.json({
                 resultado: false,
-                msj: 'No se pudieron registrar las personas',
+                msj: 'No se pudieron listar las personas',
                 err
             });
         } else {

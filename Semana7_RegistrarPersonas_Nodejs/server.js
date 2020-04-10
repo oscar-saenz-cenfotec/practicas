@@ -54,3 +54,6 @@ function handleError(res, reason, message, code) {
 }
 
 // Conexión a todas la rutas.
+
+const personas = require('./api/routes/personas.route');
+app.use('/api', personas)
