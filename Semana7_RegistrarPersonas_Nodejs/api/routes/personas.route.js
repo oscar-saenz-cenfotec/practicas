@@ -53,4 +53,98 @@ router.get('/listar-personas', (req, res) => {
     });
 });
 
+router.post('/agregar-telefono', function(req, res) {
+    Persona.update({ _id: req.body._id }, {
+        $push: {
+            'telefonos': {
+                numero: req.body.numero,
+                descripcion: req.body.descripcion
+            }
+        }
+
+    },
+    function(error) {
+        if (error) {
+            return res.json({
+                success: false,
+                msj: 'No se pudo agregar el teléfono',
+                err
+            })
+        } else {
+            return res.json({
+                success: true,
+                msj: 'Se agregó correctamente el teléfono'
+            });
+        }
+        }
+    
+    )
+});
+
+router.post('/agregar/tarjeta', function(req, res) {
+    Persona.update({ _id: req.body._id }, {
+        $push: {
+            'tarjetas': {
+                tipoTarjeta: req.body.tipoTarjeta,
+                numeroTarjeta: req.body.numeroTarjeta,
+                fechaExp: req.body.fechaExp,
+                codigoCVV: req.body.codigoCVV
+            }
+        }
+
+    },
+    function(error) {
+        if (error) {
+            return res.json({
+                success: false,
+                msj: 'No se pudo agregar la tarjeta',
+                err
+            })
+        } else {
+            return res.json({
+                success: true,
+                msj: 'Se agregó correctamente la tarjeta'
+            });
+        }
+        }
+    
+    )
+});
+
+router.get('/buscar-persona-email/:email', function(req, res) {
+    let email = req.params.email;
+    Persona.find ({ email: email }, function(err, personaDB) {
+        if (err) {
+            return res.json({
+                success: false,
+                msj: 'No se encontró ningún cliente con ese correo',
+                err
+            })
+        } else {
+            return res.json ({
+                success: true,
+                cliente: personaDB
+            });
+        }
+    })
+});
+
+ router.get('/buscar-persona-email2', function(req, res) {
+     let email = req.query.email;
+     Persona.find({ email: email}, function(err, personaDB) {
+         if (err) {
+             return res.json({
+                 success: false,
+                 msj: 'No se encontró ningín cliente con ese correo',
+                 err
+             });
+         } else {
+             return res.json ({
+                 success: true,
+                 cliente: personaDB
+             });
+         }
+     })
+ });
+
 module.exports = router;
